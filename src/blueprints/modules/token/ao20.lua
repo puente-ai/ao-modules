@@ -1,5 +1,15 @@
--- SPDX-License-Identifier: MIT
--- Puente.ai Modules (last updated v1.0.0) (token/ao20/ao20.lua)
+--[[
+  ao20 Token Module - v0.1.0 - 17/Apr/2024
+  Puente.ai - michael@puente.ai
+  https://github.com/puente-ai/ao-modules/blob/main/src/blueprints/modules/token/ao20.lua
+
+  This module implements the base module for core ao20 Token functionality.
+
+  References: 
+    - ao Standard Token Specification: https://cookbook_ao.arweave.dev/guides/aos/blueprints/token.html
+    - ERC20 Token Standard: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol
+]]
+--
 
 local ao = require('ao')
 local json = require('json')
@@ -8,7 +18,7 @@ local bint = require('.bint')(256)
 
 local initialized = false
 local ao20 = {
-  _version = "0.0.19",
+  _version = "0.1.0",
   Balances = {},
   Allowances = {},
   Name = "",
@@ -22,21 +32,6 @@ local ao20 = {
   Paused = false,
   Initialized = initialized
 }
-
---[[
-  This module implements the base module for core ao20 Token functionality.
-  
-  Terms:
-    Sender: the wallet or Process that sends a Message in a two-party transaction
-    Spender: the wallet or Process that sends a Messages in a three-party transaction
-    Recipient: the wallet or Process that receives tokens from a transaction
-    Allowance: the quantity of tokens a wallet or Process can spend on behalf of the Sender
-
-  References: 
-    - ao Standard Token Specification: https://cookbook_ao.arweave.dev/guides/aos/blueprints/token.html
-    - ERC20 Token Standard: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol
-]]
---
 
 --[[
      Local functions, only accessible from within the module

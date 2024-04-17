@@ -15,9 +15,9 @@ npm i -g https://get_ao.g8way.io
 
 Select the desired blueprint, e.g. `ao20` and update the `ao20.token.configurator` call to include your own variables. At a minimum you should update `balances` and `owner` to ensure that you have sufficient initial balances and maintain ownership.
 
-Run aos with a unique run id, e.g.
+Run aos with a unique run name, e.g.
 ```
-aos ao20 v0.1.0 run-1
+aos ao20 v0.1.0-run-1
 ```
 ... and load the blueprint
 ```

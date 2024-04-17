@@ -23,7 +23,7 @@ let initData = new Object()
 */
 describe("blueprints.ao20", function () {
   before(async () => ( 
-    processId = 'StuERWgMgDvCdo73c7Ncq1R2HoUhbSs2h5sJ0tKZobQ',
+    processId = 'k3q7P41HoZQTTNFk10Nz7FWN-1BrzDZH-lxIL1A5QK0',
     wallet = JSON.parse(
       readFileSync(path.join(__dirname, '../../wallet.json')).toString(),
     ),
@@ -571,10 +571,6 @@ describe("blueprints.ao20", function () {
 
       // Get notice data
       let noticeData = getNoticeData(resultsOut2)
-      // console.log("Notice Data: ", noticeData)
-      // console.log("noticeData[noticeData.length-4]: ", noticeData[noticeData.length-4])
-      // console.log("noticeData[noticeData.length-3]: ", noticeData[noticeData.length-3])
-      // console.log("noticeData[noticeData.length-2]: ", noticeData[noticeData.length-2])
 
       // Approval Notice
       expect(noticeData[noticeData.length-4]["data_array"][1]).to.equal(`You received an allowance of ${parseAmount(50, 10)} from ${walletAddress}`)

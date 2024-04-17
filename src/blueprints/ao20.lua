@@ -1,16 +1,8 @@
--- aos ao20-0.0.18
--- .load src/blueprints/ao20.lua
-local bint = require('.bint')(256)
-local ao = require('ao')
-local token = require('.modules.token.ao20')
-
-local ao20 = {
-  _version = "0.0.21",
-  token = token,
-  process = "IVoKzaQNotDFXKlilVprJU8FKli_N-Az99zMZWHzids"
-}
-
 --[[
+  ao20 Token Specification - v0.1.0 - 17/Apr/2024
+  Puente.ai - michael@puente.ai
+  https://github.com/puente-ai/ao-modules/blob/main/src/blueprints/ao20.lua
+  
   This module implements the ao20 Token Specification.
 
   Terms:
@@ -65,6 +57,16 @@ local ao20 = {
         It will also issue a New-Ownership-Notice to the new Owner and an Ownership-Transfer-Notice to the Sender.
 ]]
 --
+
+local bint = require('.bint')(256)
+local ao = require('ao')
+local token = require('.modules.token.ao20')
+
+local ao20 = {
+  _version = "0.1.0",
+  token = token,
+  process = "k3q7P41HoZQTTNFk10Nz7FWN-1BrzDZH-lxIL1A5QK0"
+}
 
 --[[
      Constructor used to initialize the contract - can only be called once
@@ -231,6 +233,5 @@ end)
 Handlers.add('transferOwnership', Handlers.utils.hasMatchingTag('Action', 'TransferOwnership'), function (msg)
   ao20.token.transferOwnership(msg)
 end)
-
 
 return ao20
