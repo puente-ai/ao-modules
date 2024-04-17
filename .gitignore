@@ -1,0 +1,9 @@
+// Wallets
+wallet.json
+wallet2.json
+
+// Builds
+node_modules/
+
+// Diagrams
+*.DS_Store
