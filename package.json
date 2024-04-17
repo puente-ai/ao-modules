@@ -1,0 +1,19 @@
+{
+  "name": "ao-modules",
+  "version": "0.1.0",
+  "description": "Standards and base modules for composability on AO",
+  "main": "index.js",
+  "repository": "https://github.com/puente-ai/ao-modules",
+  "author": "Puente.ai",
+  "license": "MIT",
+  "scripts": {
+    "tests": "yarn && mocha --recursive --timeout 30000",
+    "test": "yarn && mocha --recursive --timeout 30000 -g "
+  },
+  "dependencies": {
+    "@permaweb/aoconnect": "^0.0.51",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "path": "^0.12.7"
+  }
+}
